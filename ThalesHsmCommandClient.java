@@ -3,7 +3,7 @@ import java.net.ConnectException;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
-public class ThalesHsmCommandSimulator {
+public class ThalesHsmCommandClient {
 
 
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class ThalesHsmCommandSimulator {
         String hsmServerIp = "127.0.0.1";// replace with appropriate hsm server IP
         int port = 9990; // replace with appropriate hsm server port
         String command = "0000CAU.........."; // replace with appropriate hsm command, first 4 digits is the header-length
-        ThalesHsmCommandSimulator simulator = new ThalesHsmCommandSimulator();
+        ThalesHsmCommandClient simulator = new ThalesHsmCommandClient();
         simulator.processCommand(hsmServerIp, port, command);
         //Connected to HSM server: 127.0.0.1
         //Request sent to HSM: 0000CA........
